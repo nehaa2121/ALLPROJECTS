@@ -1,53 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>ALL PROJECTS</title>
+        <title>survey Form</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
-        <style>
-            *{
-                margin:0;
-                padding: 0;
-                background-color: blanchedalmond;
-            }
-            body{
-                margin: 20px;
-                padding: 20px;
-                font-family: Arial, sans-serif;
-                background-color: brown;
-                border-radius: 20px;
-            }
-            h1{
-                text-align: center;
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-                background-color: burlywood;
-                border-radius: 10px;
-            }
-            h2{
-                text-align: center;
-                background-color: chocolate;
-                padding: 20px;
-                border: 1px solid beige;
-                margin: 10px;
-                border-radius: 20px;
-            }
-            h2:hover {
-                background-color: brown;
-            }
-            a{
-                background-color: chocolate;
-                text-decoration: none;
-                color: black;
-            }
-        </style>
     </head>
     <body>
-    <h1>AllProjects</h1>
-    <a href ="html.html"><h2>HTML</h2></a>
-    <h2>CSS</h2>
-    <h2>JavaScript</h2>
-    <h2>Python</h2>
+    
+        <div class="container">
+
+            <h1>Student Survey Form</h1>
+            <p class="description">
+                Please fill out this form to help us understand your preferences.
+            </p>
+
+            <form id="surveyForm">
+
+                <!-- Name -->
+                 <label for="name">Full Name</label>
+                 <input type="text" id="name" placeholder="Enter your name">
+
+                 <!--Email-->
+                 <label for="email">Email</label>
+                 <input type="email" id="email" placeholder="Enter your email">
+
+                 <!--Age-->
+                 <label for ="age">Age</label>
+                 <input type="number" id="age" placeholder="Enter your age">
+
+                 <!-- Gender -->
+                 <label>Gender</label>
+                 
+                 <div class="option">
+                    <input type="radio" name="gender" value="Male">
+                    <span>Male</span>
+                 </div>
+
+                 <div class="option">
+                    <input type="radio" name="gender" value="Female">
+                    <span>Female</span>
+                 </div>
+
+                 <div class="option">
+                    <input type="radio" name="gender" value="Other"
+                    <span>Other</span>
+                 </div>
+
+
+                 <!-- Course -->
+                 <label for="course">Select Your Course</label>
+                 
+                 <select id="course">
+                    <option value="">--Select Course --</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="B.sc">B.sc</option>
+                    <option value="B.Tech">B.Tech</option>
+                 </select>
+
+                 <!--Skills-->
+                 <label>Which skills are you interested in?</label>
+
+                 <div class="option">
+                    <input type="checkbox" name="skills" value="HTML">
+                    <span>HTML</span>
+                 </div>
+
+                 <div class="option">
+                    <input type="checkbox" name="skills" value="CSS">
+                    <span>CSS</span>
+                 </div>
+
+                 <div class="option">
+                    <input type="checkbox" name="skills" value="JavaScript">
+                    <span>JavaScript</span>
+                 </div>
+
+                 <div class="option">
+                    <input type="checkbox" name="skills" value="Python">
+                    <span>Python</span>
+                 </div>
+
+                 <!-- Rating -->
+                 <label for="rating">Rating your learning experience</label>
+                 <input
+                    type="range"
+                    id="rating"
+                    min="1"
+                    max="10"
+                    value="5">
+
+                    <p>Rating: <span id="ratingValue">5</span>/10</p>
+
+                    <!-- Feedback -->
+                     <label for="feedback">Your Feedback</label>
+
+                     <textarea
+                     id="feedback"
+                     rows="5"
+                     placeholder="Write your feedback..."></textarea>
+
+
+                     <!--Submit-->
+                     <button type="submit">Submit Survey</button>
+
+            </form>
+
+            <div id="message"></div>
+        </div>
+        <script src="script.js"></script>
+
     </body>
 </html>
